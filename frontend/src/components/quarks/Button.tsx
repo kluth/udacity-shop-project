@@ -5,14 +5,16 @@ interface ButtonProps {
     backgroundColor?: string
     size?: 'small' | 'medium' | 'large'
     label: string
+    children?: React.ReactNode
     onClick?: () => void
 }
 
 export const Button = ({
     primary = false,
     size = 'medium',
-    backgroundColor,
-    label,
+    backgroundColor = 'navy',
+    label = 'Button',
+    children,
     ...props
 }: ButtonProps) => {
     const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
@@ -23,6 +25,7 @@ export const Button = ({
             style={{ backgroundColor }}
             {...props}
         >
+            {children}
                 {label}
         </button>
     )
