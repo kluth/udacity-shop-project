@@ -1,0 +1,7 @@
+PGUSER="someSecretUserNobodyKnows"
+PGPASSWORD="aReallyHardToGuessPassword"
+PGPORT=4321
+PGDATABASE="shopping"
+PGHOST="127.0.0.2"
+SSL=false
+PORT=1234
