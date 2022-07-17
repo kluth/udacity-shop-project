@@ -1,5 +1,6 @@
 import { Pool } from 'pg'
 import dotenv from 'dotenv'
+import bcrypt from 'bcrypt'
 
 dotenv.config()
 
@@ -37,11 +38,23 @@ export const getAllUsers = async (): Promise<UserProps[]> => {
 }
 
 export const getUser = async (id: number): Promise<UserProps> => {
-    throw new Error('Not implemented')
+    return await getAllUsers().then(users => {
+        return users.find(user => user.id === id)
+    }) || User()
 }
 
 export const createUser = async (user: UserProps): Promise<UserProps> => {
-    throw new Error('Not implemented')
+    await pool.connect()
+    let hashedPassword = await bcrypt.hash(user.password, 10)
+    let query = 'INSERT INTO users (email, password) VALUES ($1, $2) RETURNING *'
+    let values = [user.email, hashedPassword]
+    let result = await pool.query(query, values)
+    let newUser: UserProps = {
+        id: result.rows[0].id,
+        email: result.rows[0].email,
+        password: result.rows[0].password
+    }
+    return newUser
 }
 
 export const updateUser = async (id: number, user: UserProps): Promise<UserProps> => {
@@ -49,7 +62,23 @@ export const updateUser = async (id: number, user: UserProps): Promise<UserProps
 }
 
 export const loginUser = async (email: string, password: string): Promise<UserProps> => {
-    throw new Error('Not implemented')
+    await pool.connect()
+    let query = 'SELECT * FROM users WHERE email = $1'
+    let values = [email]
+    let result = await pool.query(query, values)
+    if (result.rows.length === 0) {
+        return User()
+    }
+    let user: UserProps = {
+        id: result.rows[0].id,
+        email: result.rows[0].email,
+        password: result.rows[0].password
+    }
+    let isValid = await bcrypt.compare(password, user.password)
+    if (!isValid) {
+        return User()
+    }
+    return user
 }
 
 export const logoutUser = async (): Promise<UserProps> => {
