@@ -30,6 +30,10 @@ exports.up = function(db) {
     price: {
       type: 'decimal',
       notNull: true
+    },
+    description: {
+      type: 'string',
+      notNull: true
     }
   });
 };
