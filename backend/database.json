@@ -1,0 +1,30 @@
+{
+    "dev": {
+        "driver": "pg",
+        "host": "172.19.0.2",
+        "port": "5432",
+        "user": "shopping_user",
+        "password": "password123",
+        "dbname": "shopping",
+        "sslmode": "disable"
+    },
+    "test": {
+        "driver": "sqlite3",
+        "filename": ":memory:"
+    },
+    "prod": {
+        "driver": "mysql",
+        "user": "root",
+        "password": "root"
+    },
+    "pg": {
+        "driver": "pg",
+        "user": "test",
+        "password": "test",
+        "host": "localhost",
+        "database": "mydb",
+        "port": "20144",
+        "ssl": "true",
+        "schema": "my_schema"
+    }
+}

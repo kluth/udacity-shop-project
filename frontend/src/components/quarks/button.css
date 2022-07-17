@@ -1,0 +1,26 @@
+.storybook-button--primary {
+  background-color: #0070f3;
+  border-color: #0070f3;
+  color: #fff;
+}
+
+.storybook-button--secondary {
+  background-color: #fff;
+  border-color: #fff;
+  color: #0070f3;
+}
+
+.storybook-button--small {
+  font-size: 12px;
+  padding: 0 8px;
+}
+
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 0 12px;
+}
+
+.storybook-button--large {
+  font-size: 16px;
+  padding: 0 16px;
+}

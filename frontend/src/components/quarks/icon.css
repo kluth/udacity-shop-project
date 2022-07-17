@@ -1,0 +1,26 @@
+.storybook-icon {
+    fill: hue-rotate(180deg);
+    viewport-fit: contain;
+    width: 12rem;
+    height: 12rem;
+}
+
+.storybook-icon--information {
+    background-color: navy;
+}
+
+.storybook-icon--warning {
+    background-color: orange;
+}
+
+.storybook-icon--error {
+    background-color: red;
+}
+
+.storybook-icon--success {
+    background-color: green;
+}
+
+.storybook-icon--failure {
+    background-color: red;
+}
