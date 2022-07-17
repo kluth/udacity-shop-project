@@ -5,7 +5,7 @@ interface ProductProps {
     description: string;
 }
 
-const Product = (): ProductProps => {
+export const Product = (): ProductProps => {
     let product: ProductProps = {
         id: 0,
         name: '',
@@ -15,18 +15,18 @@ const Product = (): ProductProps => {
     return product
 }
 
-const getAllProducts = async (): Promise<ProductProps[]> => {
+export const getAllProducts = async (): Promise<ProductProps[]> => {
     throw new Error('Not implemented')
 }
 
-const getProduct = async (id: number): Promise<ProductProps> => {
+export const getProduct = async (id: number): Promise<ProductProps> => {
     throw new Error('Not implemented')
 }
 
-const createProduct = async (product: ProductProps): Promise<ProductProps> => {
+export const createProduct = async (product: ProductProps): Promise<ProductProps> => {
     throw new Error('Not implemented')
 }
 
-const updateProduct = async (id: number, product: ProductProps): Promise<ProductProps> => {
+export const updateProduct = async (id: number, product: ProductProps): Promise<ProductProps> => {
     throw new Error('Not implemented')
 }
