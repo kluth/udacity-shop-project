@@ -1,0 +1,90 @@
+CREATE DATABASE shopping;
+\q
+DROP TABLE orders_products;
+\q
+drop database shopping
+;
+CREATE DATABASE shopping;
+\q
+\h
+\?
+show tables;
+\dt *.*
+SELECT * FROM information_schema.tables;
+SELECT * FROM information_schema.tables WHERE table_schema = 'shopping';
+SELECT * FROM information_schema.columns;
+show database;
+\l
+\c shopping
+\l
+\dt
+SELECT * FROM users;
+INSERT INTO users (name, email, password) VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm');
+INSERT INTO users (name, email, password, createdAt, updatedAt) VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+INSERT INTO users (name, email, password) VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+INSERT INTO users (name, email, password, createdAt) VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+INSERT INTO users (name, email, password, updatedAt) VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+INSERT INTO users (name, email, password) VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm');
+INSERT INTO users ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm');
+INSERT INTO users (name, email, password) VALUES ("Matthias", "kluthmatthias@gmail.com", "$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm');
+INSERT INTO users ("name", "email", "password", "createdAt", "updatedAt") VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+select * from users;
+INSERT INTO users ("name", "email", "password", "createdAt", "updatedAt") VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+select * from users;
+INSERT INTO users ("id", "name", "email", "password", "createdAt", "updatedAt") VALUES (gen_random_uuid(), 'Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+select * from users;
+INSERT INTO users ("name", "email", "password", "createdAt", "updatedAt") VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+select * from users;
+INSERT INTO users ("name", "email", "password", "createdAt", "updatedAt") VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+select * from users;
+DROP DATABASE shopping;
+\use postgres
+\c postgres
+DROP DATABASE shopping;
+CREATE DATABASE shopping;
+\use shopping
+\c shopping
+INSERT INTO users ("name", "email", "password", "createdAt", "updatedAt") VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+select * from users;
+\q
+\c shopping
+INSERT INTO users ("name", "email", "password", "createdAt", "updatedAt") VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+select * from users;
+INSERT INTO users ("name", "email", "password", "createdAt", "updatedAt") VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+INSERT INTO users ("name", "email", "password", "createdAt", "updatedAt") VALUES ('Matthias', 'kluthmatthias@gmail.com', '$2a$12$5mk4rRB7iFNNqGu4p5mZz.CllLiB.y.AN4aR8ebcMsMqY4T4TIqOm', now(), now());
+\q
+\c shopping
+show tables;
+show;
+CREATE DATABASE shopping;
+select * from users;
+select * from sys
+;
+select * from users;
+\c shopping;
+select * from users;
+select * from users;
+\dt
+\c shopping
+\dt
+\dn
+\dt
+\dt
+GRANT ALL ON SCHEMA public TO public;
+\dt
+\dt
+\dn+
+\dn *.*
+\dt *.*
+\dt public.*
+select * from public.users
+;
+\q
+\dt
+\dn
+\dt public.*
+\dt public.
+\dt public
+\dn public
+\d public
+\s public

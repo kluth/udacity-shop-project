@@ -22,6 +22,7 @@ exports.up = function (db) {
       primaryKey: true,
       notNull: true,
       unique: true,
+      identity: true,
       autoIncrement: true
     },
     email: {

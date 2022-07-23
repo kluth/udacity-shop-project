@@ -1,4 +1,9 @@
 {
+    "test": {
+        "driver": "sqlite3",
+        "database": ":memory:",
+        "filename": "./dev_shopping.db"
+    },
     "dev": {
         "driver": "pg",
         "host": {
@@ -16,7 +21,10 @@
         "dbname": {
             "ENV": "PGDATABASE"
         },
-        "sslmode": "disable",
-        "schema": "public"
+        "database": {
+            "ENV": "PGDATABASE"
+        },
+        "sslmode": "require",
+        "schema": "shopping"
     }
 }
